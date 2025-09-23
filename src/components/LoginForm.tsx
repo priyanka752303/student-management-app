@@ -25,12 +25,12 @@ export default function LoginForm({ onLogin }: Props) {
     setLoading(true);
     try {
       const res = await API.get("/students");
-      const students: any[] = res.data;
+      const students: { id: number; data: string }[] = res.data; // Ensure correct type
       let foundId: number | null = null;
 
       for (const s of students) {
         try {
-          const plain = decryptStudent(s.data) as StudentPlain;
+          const plain: StudentPlain = decryptStudent(s.data); // Ensure correct type
           // Ensure password comparison is case-sensitive and matches backend logic
           if (
             plain.email.toLowerCase() === email.toLowerCase() &&

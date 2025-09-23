@@ -38,7 +38,7 @@ const StudentForm: React.FC<StudentFormProps> = ({ onSuccess }) => {
 
     setLoading(true);
     try {
-      const payload = encryptStudent(form);
+      const payload = encryptStudent(form); // Ensure form is passed as StudentPlain
       await API.post("/students", {
         data: payload,
         createdAt: new Date().toISOString()

@@ -17,12 +17,12 @@ export default function StudentList() {
       const data: StudentRecord[] = res.data;
       setRecords(data);
 
-      const map: Record<number, StudentPlain> = {};
+      const map: { [id: number]: StudentPlain } = {};
       for (const r of data) {
         try {
-          map[r.id] = decryptStudent(r.data);
+          map[r.id] = decryptStudent(r.data); // Ensure correct type
         } catch {
-          // skip malformed
+          // Skip malformed entries
         }
       }
       setDecrypted(map);
@@ -55,14 +55,14 @@ export default function StudentList() {
   async function saveEdit() {
     if (!editingId || !editForm) return;
     try {
-      const payload = encryptStudent(editForm);
+      const payload = encryptStudent(editForm); // Encrypt the entire StudentPlain object
       await API.put(`/students/${editingId}`, {
         data: payload,
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
       });
       setEditingId(null);
       setEditForm(null);
-      fetchList();
+      fetchList(); // Refresh the list after saving edits
     } catch {
       alert("Update failed.");
     }

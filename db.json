@@ -1,3 +1,66 @@
 {
-  "students": []
+  "students": [
+    {
+      "id": "871b",
+      "data": {
+        "fullName": "U2FsdGVkX199HIi2I/mYRu3T6OTLVIFUrjgQUJsHp2k=",
+        "email": "U2FsdGVkX1+Myd/iR42vNhJtFj4pURzL2Q1ew4EZ/a6R2ZMZQkEqCCluc0brqNLh",
+        "phone": "U2FsdGVkX1+DWMz1t/lGRaFmzQOISZKJf1edfdFngF8=",
+        "dob": "U2FsdGVkX1+/J1Fm1ptQuXtqSWPt/MHCBxbyQKB3An8=",
+        "gender": "U2FsdGVkX19xZePVFiJuYnQ+Qoi80Q57PBuyoeFHLbc=",
+        "address": "U2FsdGVkX18qtOBafy/FcC1uS2GSx8yeuTZoTTmD46L265n5Hy8yhQch7SZbGZ5lS1D+PySWTjIsE2H6js6Qlw==",
+        "course": "U2FsdGVkX1+wBR05/9IlmzBo7OMyIp6fmqq0tvHanpA=",
+        "password": "U2FsdGVkX1/NK6SAj0OC3TKJitZGzyfqkIpGjLKEiGk="
+      },
+      "createdAt": "2025-09-23T19:49:03.300Z"
+    },
+    {
+      "id": "8896",
+      "data": {
+        "fullName": "U2FsdGVkX1+LjiZjtc1sMsA0Efp17fNpYJYiMxwRn2o=",
+        "email": "U2FsdGVkX18e8C/LMvsKJ7yv759+EInk5XYwniw4xJEVbch6I+4mK8APV3msz19R",
+        "phone": "U2FsdGVkX1/Cm5f7nNXe9RjiWhl0bjTHpbQLsXCxw50=",
+        "dob": "U2FsdGVkX1+BHCHr/NQqRJC6nwn1uTyJKwzYhF7tXbs=",
+        "gender": "U2FsdGVkX1/Lr108xBcim68gi9n7iQFlHmP64e74qAU=",
+        "address": "U2FsdGVkX19KO6Pe6ml+FmtODgHy9Vuksgfvw4JwuvzUW7wTuiKWCqBkEC81K6rCHrJCtMjmWl9hjh7W3fJ/W9Np3MGwU/z0duu4tug3N2k=",
+        "course": "U2FsdGVkX1+6nr+RBLPkIkxmPM8mAkn37gTQNBDiD7I=",
+        "password": "U2FsdGVkX1+v9vOnZJrb/WOZNcC36xZfRUgULDRFQuV1v94JT7t4aS0ANJRoJ2zt"
+      },
+      "createdAt": "2025-09-23T19:49:56.981Z"
+    },
+    {
+      "id": "094d",
+      "data": {
+        "fullName": "U2FsdGVkX1+OMUir3iAKUpHLNz2Ns0dTeyLme5CSszw=",
+        "email": "U2FsdGVkX184FCnTgjEqIGnz0aKOThtXrl15NtSJ8kNHs1zmFWd6T4wOVtWYDugX",
+        "phone": "U2FsdGVkX1/4JJvl75uEvwmrzpLLfuT4RXjqeCxh8To=",
+        "dob": "U2FsdGVkX19brob0JyzKD9hGNBld4tRew9r2QPxTSl4=",
+        "gender": "U2FsdGVkX18T0MPV/G1l4cT3b2cR4NtEnoZ8wHRBDAw=",
+        "address": "U2FsdGVkX1/L0dW9W5Kb+Nxof3b8WBIIMgGaGH2/k6vUJDBIU/rcM54OTrG+cIWMw4R5c5AsUP6Cf/gmwUi79Z5xGiAevcJzLunUz1zn9TxIbYtPlw3DKSFRodoDSUwUrq6R0QursT8DmXyqWyed2Q==",
+        "course": "U2FsdGVkX18hemM/3RKX0spc4ku87ddDEPycTK/t79I=",
+        "password": "U2FsdGVkX18L/mDJIt+rxh2MhLZKeEbuNaL38SbHUfk="
+      },
+      "createdAt": "2025-09-23T19:52:26.698Z"
+    },
+    {
+      "data": "{\"fullName\":\"Anand Kumar Yadav\",\"email\":\"yvivekanand125@gmail.com\",\"phone\":\"09936013885\",\"dob\":\"\",\"gender\":\"Other\",\"address\":\"Pure kishun singh, Rayan, Bhadohi\",\"course\":\"\",\"password\":\"vekanand125@gmail.com\"}",
+      "createdAt": "2025-09-23T20:20:54.462Z",
+      "id": "fdfa"
+    },
+    {
+      "id": "8836",
+      "data": "{\"fullName\":\"Anand Kumar Yadav\",\"email\":\"ivekanand125@gmail.com\",\"phone\":\"09936013885\",\"dob\":\"\",\"gender\":\"Other\",\"address\":\"Pure kishun singh, Rayan, Bhadohi\",\"course\":\"\",\"password\":\"vekanand125@gmail.com\"}",
+      "createdAt": "2025-09-23T20:19:05.546Z"
+    },
+    {
+      "id": "6e15",
+      "data": "{\"fullName\":\"Anand Kumar Yadav\",\"email\":\"kanand125@gmail.com\",\"phone\":\"09936013885\",\"dob\":\"\",\"gender\":\"Other\",\"address\":\"Pure kishun singh, Rayan, Bhadohi\",\"course\":\"\",\"password\":\"Anand@123\"}",
+      "createdAt": "2025-09-23T20:19:36.596Z"
+    },
+    {
+      "id": "7728",
+      "data": "{\"fullName\":\"Anand Kumar Yadav\",\"email\":\"wdsweivekanand125@gmail.com\",\"phone\":\"09936013885\",\"dob\":\"\",\"gender\":\"Other\",\"address\":\"Pure kishun singh, Rayan, Bhadohi\",\"course\":\"\",\"password\":\"Ashshhd@123\"}",
+      "createdAt": "2025-09-23T20:20:08.363Z"
+    }
+  ]
 }

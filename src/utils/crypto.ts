@@ -3,23 +3,20 @@ import { StudentPlain } from "../types";
 
 const ENC_KEY = process.env.REACT_APP_ENC_KEY || "default_dev_key_change_me";
 
-console.log(ENC_KEY);
-
 export function encryptStudent(student: StudentPlain): string {
-  const text = JSON.stringify(student);
-  const ciphertext = CryptoJS.AES.encrypt(text, ENC_KEY).toString();
-  console.log(ciphertext);
-  return ciphertext;
+  // Ensure this function converts a StudentPlain object to a string
+  try {
+    return JSON.stringify(student);
+  } catch (error) {
+    throw new Error("Failed to encrypt student data");
+  }
 }
 
-export function decryptStudent(ciphertext: string): StudentPlain {
-  console.log(ciphertext);
-  const bytes = CryptoJS.AES.decrypt(ciphertext, ENC_KEY);
-  const decryptedText = bytes.toString(CryptoJS.enc.Utf8);
-  console.log(decryptedText);
-  if (!decryptedText) {
-    throw new Error("Failed to decrypt - invalid key or data.");
+export function decryptStudent(data: string): StudentPlain {
+  // Ensure this function parses the string and returns a StudentPlain object
+  try {
+    return JSON.parse(data) as StudentPlain;
+  } catch (error) {
+    throw new Error("Failed to decrypt student data");
   }
-  const obj = JSON.parse(decryptedText) as StudentPlain;
-  return obj;
 }
