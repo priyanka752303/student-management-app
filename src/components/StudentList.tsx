@@ -16,11 +16,12 @@ export default function StudentList() {
       const res = await API.get("/students");
       const data: StudentRecord[] = res.data;
       setRecords(data);
+      console.log(data)
 
       const map: { [id: number]: StudentPlain } = {};
       for (const r of data) {
         try {
-          map[r.id] = decryptStudent(r.data); // Ensure correct type
+          map[r.id] = decryptStudent(r.data); 
         } catch {
           // Skip malformed entries
         }
@@ -55,16 +56,20 @@ export default function StudentList() {
   async function saveEdit() {
     if (!editingId || !editForm) return;
     try {
-      const payload = encryptStudent(editForm); // Encrypt the entire StudentPlain object
+      const payload = encryptStudent(editForm); 
       await API.put(`/students/${editingId}`, {
         data: payload,
         createdAt: new Date().toISOString(),
       });
       setEditingId(null);
       setEditForm(null);
-      fetchList(); // Refresh the list after saving edits
-    } catch {
-      alert("Update failed.");
+      fetchList(); 
+    } catch (error: any) {
+      if (error.message.includes("Network Error")) {
+        alert("Failed to connect to server. Please check your network connection.");
+      } else {
+        alert("Update failed.");
+      }
     }
   }
 

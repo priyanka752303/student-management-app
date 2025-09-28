@@ -25,13 +25,12 @@ export default function LoginForm({ onLogin }: Props) {
     setLoading(true);
     try {
       const res = await API.get("/students");
-      const students: { id: number; data: string }[] = res.data; // Ensure correct type
+      const students: { id: number; data: string }[] = res.data; 
       let foundId: number | null = null;
 
       for (const s of students) {
         try {
-          const plain: StudentPlain = decryptStudent(s.data); // Ensure correct type
-          // Ensure password comparison is case-sensitive and matches backend logic
+          const plain: StudentPlain = decryptStudent(s.data); 
           if (
             plain.email.toLowerCase() === email.toLowerCase() &&
             plain.password === password
@@ -41,7 +40,7 @@ export default function LoginForm({ onLogin }: Props) {
           }
         } catch (error) {
           console.error("Decryption error for student ID:", s.id, error);
-          // Skip malformed entries
+          
         }
       }
 
@@ -50,8 +49,12 @@ export default function LoginForm({ onLogin }: Props) {
       } else {
         setErr("Invalid credentials. Please check your email and password.");
       }
-    } catch (error) {
-      setErr("Failed to connect to server. Is json-server running?");
+    } catch (error: any) {
+      if (error.message.includes("Network Error")) {
+        setErr("Failed to connect to server. Please check your network connection.");
+      } else {
+        setErr("Failed to connect to server. Is json-server running?");
+      }
     } finally {
       setLoading(false);
     }

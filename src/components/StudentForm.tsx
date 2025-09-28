@@ -38,7 +38,7 @@ const StudentForm: React.FC<StudentFormProps> = ({ onSuccess }) => {
 
     setLoading(true);
     try {
-      const payload = encryptStudent(form); // Ensure form is passed as StudentPlain
+      const payload = encryptStudent(form); 
       await API.post("/students", {
         data: payload,
         createdAt: new Date().toISOString()
@@ -48,8 +48,12 @@ const StudentForm: React.FC<StudentFormProps> = ({ onSuccess }) => {
       if (onSuccess) {
         onSuccess();
       }
-    } catch (error) {
-      setMessage("Failed to add student. Is server running?");
+    } catch (error: any) {
+      if (error.message.includes("Network Error")) {
+        setMessage("Failed to connect to server. Please check your network connection.");
+      } else {
+        setMessage("Failed to add student. Is server running?");
+      }
     } finally {
       setLoading(false);
     }
